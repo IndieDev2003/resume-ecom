@@ -2,6 +2,7 @@ import React from "react";
 import { crossSvg, menuSvg } from "../assets";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 function Nav() {
   const { contextSafe } = useGSAP();
@@ -20,9 +21,8 @@ function Nav() {
           x: "0%",
           y: 10,
           opacity: 1,
-          duration: 1.,
+          duration: 1,
           stagger: 0.2,
-          
         }
       )
       .fromTo(
@@ -47,7 +47,7 @@ function Nav() {
 
   const closeMobileMenu = contextSafe(() => {
     const tl = gsap.timeline();
-    tl.to(".mobile-menu button", { y: -10, opacity: 0, })
+    tl.to(".mobile-menu button", { y: -10, opacity: 0 })
       .to(".mobile-menu input", { x: "100%", opacity: 0 })
       .to(".mobile-menu li", {
         x: "100%",
@@ -61,7 +61,7 @@ function Nav() {
   });
 
   return (
-    <header className="min-h-14 flex items-center justify-between px-2 sm:px-10 nav relative">
+    <header className="min-h-14 flex items-center justify-between px-2 md:px10 sm:px-5 nav relative">
       <h2 className="text-3xl">Logo Here</h2>
       <ul className="sm:flex items-center justify-center gap-10 hidden nav-li">
         <li>Home</li>
@@ -69,7 +69,9 @@ function Nav() {
         <li>Contact Us</li>
       </ul>
       <div className="flex items-center justify-center">
-        <p className="text-xl">Github</p>
+        <Link to={'https://github.com/indiedev2003'} target="_blank">
+          <p className="text-xl">Github</p>
+        </Link>
         <img
           src={menuSvg}
           onClick={openMobileMenu}
@@ -90,7 +92,12 @@ function Nav() {
           <li className="text-2xl my-2 cursor-pointer">All Products</li>
           <li className="text-2xl my-2 cursor-pointer">About Us</li>
           <li className="text-2xl my-2 cursor-pointer">Contact Us</li>
-          <li className="text-2xl my-2 cursor-pointer">Github</li>
+          <Link to={'https://github.com/indiedev2003'} target="_blank">
+            <li className="text-2xl my-2 cursor-pointer">Github</li>
+          </Link>
+          <Link to={'https://linkedin.com/in/gagan-suman'} target="_blank">
+            <li className="text-2xl my-2 cursor-pointer">Linked In</li>
+          </Link>
         </ul>
 
         <form

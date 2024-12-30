@@ -3,7 +3,7 @@ import { hero2, hero3, heroMain } from '../assets'
 
 function Hero2() {
   return (
-      <section className='h-screen sm:h-[550px] px-2 sm:px-10 gap-3 sm:gap-0 flex flex-col sm:flex-row justify-between'>
+      <section className='h-screen sm:h-[550px] px-2 md:px10 sm:px-5 gap-3 sm:gap-0 flex flex-col md:flex-row justify-between'>
           {/* Hero Left */}
           <div className='h-full w-full sm:w-3/4 border rounded-3xl flex items-center bg-cover bg-center'  style={{backgroundImage : `url(${heroMain})`}}>
               <div className='w-[300px] ml-10'>
