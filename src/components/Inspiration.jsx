@@ -5,7 +5,7 @@ function Inspiration() {
   return (
     <section className="min-h-[240px] w-full flex gap-2 items-center justify-between px-2 md:px10 sm:px-5 my-14 sm:my-4 relative overflow-hidden ">
       {/* Text Box */}
-      <div className="min-h-[250px]  flex flex-col gap-2 items-start justify-end w-full bg-red-300 md:max-w-[30%] p-5 rounded-3xl">
+      <div className="min-h-[250px]  flex flex-col gap-2 items-start justify-end w-full  md:max-w-[30%] p-5 rounded-3xl">
         <h3 className="text-6xl sm:text-3xl">Casual Inspirations</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
@@ -17,7 +17,7 @@ function Inspiration() {
       </div>
 
       {/* Image Box  */}
-      <div className="h-[290px]  w-[70%]  hidden sm:flex items-center justify-between gap-2 text-white bg-gray-400 p-2">
+      <div className="h-[290px]  w-[70%]  hidden sm:flex items-center justify-between gap-2 text-white p-2">
         {/* Image Box 1 */}
         <div
           className=" flex-shrink-0 h-full w-1/2 bg-cover bg-center flex items-end p-5 justify-between rounded-3xl border"
